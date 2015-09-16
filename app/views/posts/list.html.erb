@@ -1,0 +1,22 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h1>MY BLOG!!!!</h1>
+
+    <%= link_to "posts/new" do %>
+      Add New Post
+      <% end %>
+    <div class = "Posts">
+      <% @posts.each do |post| %>
+        <div class = "Post">
+          <%= link_to "/posts/#{post.id}" do %>
+            <h3><%= post.title %></h3>
+          <% end %>
+          </p><%= post.body %></p>
+        </div>
+      <% end %>
+    </div>
+  </body>
+</html>
