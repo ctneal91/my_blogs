@@ -1,5 +1,17 @@
-<h1>Posts#detail</h1>
-<p>Find me in app/views/posts/detail.html.erb</p>
+<html>
+  <head>
+  </head>
 
-<h3> <%= @post.title %></h3>
-<p> <%= @post.body %></p>
+  <body>
+    <%= link_to 'posts#list' do %>
+      <h1>
+        <div class ="home_button">MY BLOG!!!</div>
+      </h1>
+    <% end %>
+    <%= link_to "/posts/#{post.id}/edit" do %>
+      <h3>Edit Post</h3>
+    <% end %>
+    <h3> <%= @post.title %></h3>
+    <p> <%= @post.body %></p>
+  </body>
+</html>

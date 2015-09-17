@@ -20,3 +20,11 @@
    font-family: sans-serif;
    text-align: justify;
  }
+
+h1 {
+  color: black;
+}
+
+h1 .home_button {
+  text-decoration: none;
+}
