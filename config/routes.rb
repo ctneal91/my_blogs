@@ -6,13 +6,13 @@ Rails.application.routes.draw do
   #create a post
   get 'posts/:id' => 'posts#detail'
   #post page
-  post 'posts' => 'posts#create'
+  post 'posts' => 'posts#create' "as: :post"
 
   #update a post
   #edit page
   get 'posts/:id/edit' => 'posts#edit'
   #patch page
-  patch 'posts/:id' => 'posts#update'
+  patch 'posts/:id' => 'posts#update' "as: :patch"
 
 
 
