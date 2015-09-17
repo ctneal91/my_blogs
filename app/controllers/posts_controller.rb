@@ -25,8 +25,8 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.new params.require(:post).permit(:title, :body)
-    if @post.save
+    @post = Post.find params[:id]
+    if @post.update params.require(:post).permit(:title, :body)
       redirect_to root_path
     else
       render :edit

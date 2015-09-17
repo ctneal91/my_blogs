@@ -4,15 +4,15 @@ Rails.application.routes.draw do
 
 
   #create a post
-  get 'posts/:id' => 'posts#detail'
+  get 'posts/:id' => 'posts#detail', as: :post
   #post page
-  post 'posts' => 'posts#create', as: :post
+  post 'posts' => 'posts#create'
 
   #update a post
   #edit page
   get 'posts/:id/edit' => 'posts#edit'
   #patch page
-  patch 'posts/:id' => 'posts#update', as: :patch
+  patch 'posts/:id' => 'posts#update'
 
 
 

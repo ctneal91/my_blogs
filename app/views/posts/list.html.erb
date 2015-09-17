@@ -14,7 +14,7 @@
           <%= link_to "/posts/#{post.id}" do %>
             <h3><%= post.title %></h3>
           <% end %>
-          </p><%= post.body %></p>
+        </p><%= truncate post.body,length:250 %></p>
         </div>
       <% end %>
     </div>
