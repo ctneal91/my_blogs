@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
   root 'posts#list'
-  get 'posts/new' => 'posts#new'
+  get 'posts/new' => 'posts#new', as: :new_post
 
 
   #create a post
   get 'posts/:id' => 'posts#detail'
   #post page
-  post 'posts' => 'posts#create' "as: :post"
+  post 'posts' => 'posts#create', as: :post
 
   #update a post
   #edit page
   get 'posts/:id/edit' => 'posts#edit'
   #patch page
-  patch 'posts/:id' => 'posts#update' "as: :patch"
+  patch 'posts/:id' => 'posts#update', as: :patch
 
 
 
